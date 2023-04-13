@@ -13,7 +13,7 @@
 </div>
 
 <p align="center">
-  This is my solution for the Intro component with sign up form design challenge on Frontend Mentor.
+  Take a look at my responsive 'Intro component with signup form' project from Frontend Mentor! This project includes a beautiful and functional sign-up form built with HTML, CSS, and JavaScript, and features form validation.
 </p>
 
 ### Screenshot
