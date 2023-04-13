@@ -1,0 +1,35 @@
+:root {
+  // Primary
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --green-pale: hsl(154, 48%, 60%);
+  --green-shade: hsl(154, 100%, 35%);
+  --green-shade-pale: hsl(154, 41%, 48%);
+
+  // Accent
+  --blue: hsl(248, 32%, 49%);
+
+  // Neutral
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+
+  //added
+  --white: white;
+}
+
+$bp-large: 78.15em; // 1250px
+$bp-medium: 61.25em; // 980px
+$bp-small-x: 50em; // 800px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url(../images/bg-intro-mobile.png);
+  background-color: var(--red);
+  color: var(--white);
+
+  @media only screen and (min-width: $bp-small) {
+    background-image: url(../images/bg-intro-desktop.png);
+  }
+}

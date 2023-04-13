@@ -1,0 +1,123 @@
+.form-section {
+  text-align: center;
+
+  &__heading {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: var(--blue);
+    padding: 1rem 4rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .form {
+    background-color: var(--white);
+    color: var(--dark-blue);
+    border-radius: 10px;
+    box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+
+    .input-container {
+      width: 100%;
+      margin-bottom: 1rem;
+
+      .output-message {
+        font-size: 0.7rem;
+        text-align: right;
+        margin-top: 0.2rem;
+        padding-right: 0.5rem;
+        color: var(--red);
+      }
+
+      .input-wrapper {
+        --height: 3rem;
+        --fs-input: 0.9rem;
+        position: relative;
+        height: var(--height);
+
+        label {
+          z-index: 2;
+          position: absolute;
+          left: 1rem;
+          top: calc(var(--height) / 2 - var(--fs-input) / 1.3);
+          font-size: var(--fs-input);
+          pointer-events: none;
+          opacity: 0.8;
+          transition: all 0.2s ease;
+          font-weight: 500;
+        }
+
+        input {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          border: 1px solid var(--grayish-blue);
+          border-radius: 5px;
+          outline: none;
+          padding: 0 1rem;
+          z-index: 1;
+          font-size: var(--fs-input);
+
+          &:focus {
+            border: 1px solid var(--green);
+          }
+
+          &:focus + .form-label,
+          &:not(:placeholder-shown) + .form-label {
+            top: -11px;
+            background-color: var(--white);
+            opacity: 1;
+            padding: 0.2rem;
+            font-size: calc(var(--fs-input) - 3px);
+            color: var(--green);
+          }
+        }
+
+        .error-icon {
+          position: absolute;
+          z-index: 2;
+          right: 0.5rem;
+          top: 50%;
+          transform: translateY(-50%);
+          max-width: 1.3rem;
+          display: none;
+        }
+      }
+    }
+
+    .btn-submit {
+      background-color: var(--green);
+      border: none;
+      width: 100%;
+      height: 3rem;
+      cursor: pointer;
+      color: var(--white);
+      border-radius: 5px;
+      box-shadow: 0 5px 0 var(--green-shade);
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: var(--green-pale);
+        box-shadow: 0 5px 0 var(--green-shade-pale);
+      }
+    }
+
+    .tarms-note {
+      font-size: 0.7rem;
+      padding: 0 1rem;
+      color: var(--grayish-blue);
+
+      a {
+        color: var(--red);
+        font-weight: 600;
+      }
+    }
+  }
+}
