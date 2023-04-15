@@ -12,49 +12,63 @@ const validateEmail = (email) => {
   return emailRegex.test(email);
 };
 
+/// Manipulating the DOM
+const domManipulate = function (inp, label) {
+  const errorMsgEl = inp.parentElement.nextElementSibling;
+
+  if (inp.value === "") {
+    errorMsgEl.textContent = `${label} can not be empty`;
+    inp.style.borderColor = "var(--red)";
+    inp.labels[0].style.color = "var(--red)";
+    return false;
+  } else if (label === "Email" && !validateEmail(inp.value)) {
+    errorMsgEl.textContent = "Looks like this is not an email";
+    inp.style.borderColor = "var(--red)";
+    inp.labels[0].style.color = "var(--red)";
+    return false;
+  } else {
+    errorMsgEl.textContent = "";
+    inp.style.borderColor = "var(--grayish-blue)";
+    inp.labels[0].style.color = "var(--green)";
+    return true;
+  }
+};
+
 /// Check all inputs
 const checkData = function () {
+  let isValid = true;
+
   allInputs.forEach((input) => {
-    const errorMsgEl = input.parentElement.nextElementSibling;
-
     if (input.id === "fname") {
-      if (input.value === "") {
-        return (errorMsgEl.textContent = "First Name can not be empty");
-      } else {
-        return (errorMsgEl.textContent = "");
+      if (!domManipulate(input, "First Name")) {
+        isValid = false;
       }
     }
-
     if (input.id === "lname") {
-      if (input.value === "") {
-        return (errorMsgEl.textContent = "Last Name can not be empty");
-      } else {
-        return (errorMsgEl.textContent = "");
+      if (!domManipulate(input, "Last Name")) {
+        isValid = false;
       }
     }
-
     if (input.id === "email") {
-      if (input.value === "") {
-        return (errorMsgEl.textContent = "Email address can not be empty");
-      } else if (!validateEmail(input.value)) {
-        return (errorMsgEl.textContent = "Looks like this is not an email");
-      } else {
-        return (errorMsgEl.textContent = "");
+      if (!domManipulate(input, "Email")) {
+        isValid = false;
       }
     }
-
     if (input.id === "password") {
-      if (input.value === "") {
-        return (errorMsgEl.textContent = "Password can not be empty");
-      } else {
-        return (errorMsgEl.textContent = "");
+      if (!domManipulate(input, "Password")) {
+        isValid = false;
       }
     }
   });
+
+  return isValid;
 };
 
-///
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  checkData();
+  console.log("checkData():", checkData());
+
+  if (checkData()) {
+    form.submit();
+  }
 });

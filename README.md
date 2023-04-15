@@ -20,7 +20,7 @@
 
 <a align="center" href="https://intro-signup-form-alamin.netlify.app/">
 
-<img src="./screenshots/"/>
+<img src="./screenshots/Screenshot - Intro component with sign-up form.png"/>
 </a>
 
 ### The challenge
@@ -32,7 +32,6 @@ Users should be able to:
 - Receive an error message when the `form` is submitted if:
   - Any `input` field is empty. The message for this error should say _"[Field Name] cannot be empty"_
   - The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say _"Looks like this is not an email"_
-- **Bonus:** Dark mode toggle
 
 #### Built with
 
@@ -71,7 +70,21 @@ npm start
 
 ### What I learned
 
+In this project, I learned several key concepts related to form validation and manipulation using JavaScript. First, I learned how to use regular expressions to validate form inputs, such as email addresses, using the `test()` method.
+
+Next, I learned how to manipulate the DOM to show error messages and style form elements using JavaScript. This involved accessing the parent and sibling elements of each form input to display relevant error messages, and changing the border color and label color of each input to indicate its validity.
+
+I also learned about the difference between the click event on a submit button and the submit event on a form. While both events can be used to trigger form submissions, the submit event allows for additional validation and prevents the form from being submitted if any input is invalid.
+
+Furthermore, I learned how to check if all form inputs are valid before submitting the form using JavaScript. This involved looping through each input and checking its validity using a function that combined regular expression validation and DOM manipulation.
+
+Finally, I learned how to handle form submissions using JavaScript, including accessing form inputs and submitting forms. This involved preventing the default form submission behavior using `preventDefault()` and manually submitting the form using `submit()`. Overall, this project provided a great introduction to working with form elements in JavaScript.
+
 ### Useful resources
+
+- [RegexMagic](https://www.regular-expressions.info/email.html) - This article by <b>Jan Goyvaerts</b> provides an in-depth explanation of how to use regular expressions to validate email addresses. The article not only explains how to write regular expressions for email validation but also covers the common mistakes made while writing regular expressions for email validation.
+
+It provides clear and concise examples of regular expressions for email validation and also explains the logic behind each regular expression.
 
 ## Author
 
