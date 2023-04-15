@@ -14,19 +14,23 @@ const validateEmail = (email) => {
 /// Manipulating the DOM
 const domManipulate = function (inp, label) {
   const errorMsgEl = inp.parentElement.nextElementSibling;
+  const errorcIcon = inp.parentElement.childNodes[5];
 
   if (inp.value === "") {
     errorMsgEl.textContent = `${label} can not be empty`;
+    errorcIcon.style.display = "block";
     inp.style.borderColor = "var(--red)";
     inp.labels[0].style.color = "var(--red)";
     return false;
   } else if (label === "Email" && !validateEmail(inp.value)) {
     errorMsgEl.textContent = "Looks like this is not an email";
+    errorcIcon.style.display = "block";
     inp.style.borderColor = "var(--red)";
     inp.labels[0].style.color = "var(--red)";
     return false;
   } else {
     errorMsgEl.textContent = "";
+    errorcIcon.style.display = "none";
     inp.style.borderColor = "var(--grayish-blue)";
     inp.labels[0].style.color = "var(--green)";
     return true;
@@ -66,7 +70,6 @@ const checkData = function () {
 //Submitting the form
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  console.log("checkData():", checkData());
 
   if (checkData()) {
     form.submit();
