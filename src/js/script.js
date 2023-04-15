@@ -1,7 +1,6 @@
 "use strict";
 
 const form = document.querySelector(".form");
-const btnSubmit = document.querySelector(".btn-submit");
 const allInputs = document.querySelectorAll(".form-input");
 
 //validating the input
@@ -64,6 +63,7 @@ const checkData = function () {
   return isValid;
 };
 
+//Submitting the form
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   console.log("checkData():", checkData());
