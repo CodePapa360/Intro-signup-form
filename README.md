@@ -16,14 +16,14 @@
   Take a look at my responsive 'Intro component with signup form' project from Frontend Mentor! This project includes a beautiful and functional sign-up form built with HTML, CSS, and JavaScript, and features form validation.
 </p>
 
-### Screenshot
+## Screenshot
 
 <a align="center" href="https://intro-signup-form-alamin.netlify.app/">
 
 <img src="./screenshots/Screenshot - Intro component with sign-up form.png"/>
 </a>
 
-### The challenge
+## The challenge
 
 Users should be able to:
 
@@ -33,7 +33,7 @@ Users should be able to:
   - Any `input` field is empty. The message for this error should say _"[Field Name] cannot be empty"_
   - The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say _"Looks like this is not an email"_
 
-### Built with
+## Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
@@ -42,7 +42,7 @@ Users should be able to:
 - NPM
 - Parcel
 
-### Installation
+## Installation
 
 - Clone this repo:
 
@@ -68,7 +68,7 @@ npm run build
 npm start
 ```
 
-### What I learned
+## What I learned
 
 In this project, I learned several key concepts related to form validation and manipulation using JavaScript. First, I learned how to use regular expressions to validate form inputs, such as email addresses, using the `test()` method.
 
@@ -80,13 +80,13 @@ Furthermore, I learned how to check if all form inputs are valid before submitti
 
 Finally, I learned how to handle form submissions using JavaScript, including accessing form inputs and submitting forms. This involved preventing the default form submission behavior using `preventDefault()` and manually submitting the form using `submit()`. Overall, this project provided a great introduction to working with form elements in JavaScript.
 
-### Useful resources
+## Useful resources
 
 - [RegexMagic](https://www.regular-expressions.info/email.html) - This article by <b>Jan Goyvaerts</b> provides an in-depth explanation of how to use regular expressions to validate email addresses. The article not only explains how to write regular expressions for email validation but also covers the common mistakes made while writing regular expressions for email validation.
 
 It provides clear and concise examples of regular expressions for email validation and also explains the logic behind each regular expression.
 
-### Author
+## Author
 
 <b>👤 Alamin</b>
 
@@ -97,14 +97,14 @@ It provides clear and concise examples of regular expressions for email validati
 
 Feel free to contact me with any questions or feedback!
 
-### Show your support
+## Show your support
 
 Give a ⭐️ if you liked this project!
 
-### Acknowledgments
+## Acknowledgments
 
 I would like to express my gratitude to Frontend Mentor for providing this project idea and design. Their platform is an excellent resource for web developers looking to improve their skills.
 
-### License
+## License
 
 This project is licensed under the [MIT](https://github.com/CodePapa360/Intro-signup-form/blob/main/LICENSE.md) license, which means you can use, modify, and distribute the code as you wish. If you have any questions or feedback, feel free to reach out. Thank you for considering my code!
