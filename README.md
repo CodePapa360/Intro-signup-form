@@ -13,7 +13,7 @@
 </div>
 
 <p align="center">
-  Take a look at my responsive 'Intro component with signup form' project from Frontend Mentor! This project includes a beautiful and functional sign-up form built with HTML, CSS, and JavaScript, and features form validation.
+  This project is a signup form built with HTML, CSS, and JavaScript. It features form validation using regular expressions and DOM manipulation to show error messages and style form elements.
 </p>
 
 ## Screenshot
