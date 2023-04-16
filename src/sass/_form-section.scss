@@ -66,8 +66,8 @@
             border: 1px solid var(--green);
           }
 
-          &:focus + .form-label,
-          &:not(:placeholder-shown) + .form-label {
+          &:focus ~ .form-label,
+          &:not(:placeholder-shown).form-input:not(:focus) ~ .form-label {
             top: -11px;
             background-color: var(--white);
             opacity: 1;
