@@ -32,7 +32,7 @@ const domManipulate = function (inp, label) {
     errorMsgEl.textContent = "";
     errorcIcon.style.display = "none";
     inp.style.borderColor = "var(--grayish-blue)";
-    inp.labels[0].style.color = "var(--green)";
+    inp.labels[0].style.color = null;
     return true;
   }
 };
