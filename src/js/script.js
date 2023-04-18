@@ -1,4 +1,5 @@
 "use strict";
+import "../sass/main.scss";
 
 const form = document.querySelector(".form");
 const allInputs = document.querySelectorAll(".form-input");

@@ -2,16 +2,10 @@
   "name": "intro-component-with-signup-form",
   "version": "1.0.0",
   "description": "Intro component with signup form",
-  "web": "./dist/index.html",
-  "targets": {
-    "web": {
-      "context": "browser",
-      "publicUrl": "./"
-    }
-  },
+  "main": "index.html",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "start": "webpack-dev-server",
+    "build": "webpack"
   },
   "author": "Alamin",
   "license": "MIT",
@@ -19,7 +13,14 @@
     "parcel": "^2.8.3"
   },
   "devDependencies": {
-    "sass": "^1.60.0",
-    "@parcel/transformer-sass": "^2.8.3"
+    "css-loader": "^6.7.3",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.1",
+    "mini-css-extract-plugin": "^2.7.5",
+    "node-sass": "^8.0.0",
+    "sass-loader": "^13.2.2",
+    "webpack": "^5.79.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.3"
   }
 }
