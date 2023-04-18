@@ -40,7 +40,7 @@ Users should be able to:
 - JavaScript
 - Mobile-first workflow
 - NPM
-- Parcel
+- Webpack
 
 ## Installation
 
